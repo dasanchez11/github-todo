@@ -1,0 +1,438 @@
+
+.todo-section{
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 54.5px-37px);
+    width: 100vw;
+}
+
+@media (max-width: 900px) {
+    .todo-section{
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+.todo-column{
+    display: block;
+    width: 50%;
+    padding: 2rem;
+}
+
+@media (max-width: 1150px) {
+    .todo-column {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .todo-column {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .todo-column {
+      width: 95%;
+    }
+  }
+
+
+
+.todo-heading{
+    text-align: center;
+    color: var(--primary-color);
+    padding: 1rem
+}
+
+.todo-column-section{
+    position: relative;
+    margin: 1rem auto;
+    padding: 1rem 0;
+    background-color: var(--secondary-bg-color);
+    border-radius: 4px;
+    min-height: 29rem;
+    max-height: 29rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.todo-table{
+    border-collapse: collapse;
+    height: 100%;
+    table-layout: fixed;
+    border-spacing: 50px 0;
+    width: 90%;
+}
+
+.todo-table-full{
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1320px) {
+    .todo-table-full{
+        overflow-x: scroll;
+    }
+  }
+
+
+thead{
+    display: block  ;
+    width: 100%;
+    overflow: visible;
+}
+
+tbody{
+    display: block;
+    height: 12rem;
+    overflow: auto;
+}
+
+/* thead th{
+    width: 20%;
+    float:left;
+  } */
+
+.todo-table thead tr {
+    text-align: left;
+    color: var(--font-secondary)
+}
+.todo-table th,
+.todo-table td {
+    padding: 0.5rem 0.5rem;
+}
+
+.todo-table tbody tr {
+    color: var(--font-secondary);
+    border-bottom:1px solid var(--primary-color);
+}
+
+.todo-table-container{
+    width: max-content;
+    margin: 0 auto;
+}
+
+
+/* 
+thead{
+    display: block;
+    width: 100%;
+    mobile 480
+    tablet 768
+}
+
+} */
+
+
+.actions-container{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.todo-form-element{
+    position: relative;
+    width: 80%;
+    height: 0.5rem;
+}
+
+.todo-form-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--font-secondary);
+    outline: none;
+    padding: 1rem 0.5rem;
+    background: none;
+    z-index: 1;
+}
+.todo-form-input:hover{
+    border-color: var(--main-bg-color);
+}
+
+.todo-form-input:focus{
+    border-color: var(--primary-color);
+}
+
+.todo-form-label{
+    position: absolute;
+    left: 1rem;
+    top: 0.6rem; 
+    padding:0 0.5rem;
+    color: var(--font-secondary);
+    cursor: text;
+    transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+    background-color: var(--secondary-bg-color);
+    z-index: 0;
+}
+
+.todo-form-input:focus ~ .todo-form-label,
+.todo-form-input:not(:placeholder-shown).todo-form-input:not(:focus) ~ .todo-form-label{
+    top:-.4rem;
+    font-size: small;
+    left: 0.8rem;
+    z-index: 1;
+}
+
+.todo-dropdown-container{
+    position: relative;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    height: 2.2rem;
+    padding-left: 0.5rem;
+    cursor:pointer
+}
+
+.todo-dropdown-container ul{
+    visibility: hidden;
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    top:1.8rem;
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    left: 0;
+    border: 1.5px solid var(--primary-color);
+}
+.todo-dropdown-container  ul.show{
+    visibility:visible;
+    max-height: 80px;
+    transition: all 0.4s;
+    overflow: scroll;
+}
+
+.todo-asignee-option{
+    padding: 0.2rem 0.5rem;
+    color: var(--font-secondary);
+}
+.todo-dropdown-input{
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    border: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--font-secondary);
+    outline: none;
+    padding: 1rem 0.5rem;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+}
+.todo-asignee-option:hover{
+    background-color: var(--font-secondary);
+    color:var(--primary-color) ;
+}
+.todo-asignee-option:not(:last-child){
+    border-bottom:0.5px solid var(--primary-color)
+}
+
+.todo-dropdown-input:focus ~ .todo-form-dropdown-label,
+.todo-dropdown-input:not(:placeholder-shown).todo-dropdown-input:not(:focus) ~ .todo-form-dropdown-label{
+    top:-.6rem;
+    font-size: small;
+    left: 0.8rem;
+    z-index: 1;
+    padding: 0rem 0.5rem;
+}
+
+.todo-form-dropdown-label{
+    position: absolute;
+    top:0.4rem;
+    color: var(--font-secondary);
+    background-color: var(--secondary-bg-color);
+    transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+}
+
+
+
+.todo-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    width: 100%;
+    justify-items: center;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.todo-grid-element{
+    width: 90%;
+    height: 3rem;
+}
+
+.todo-form-element-radio{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    justify-items: center;
+    gap: 0.3rem;
+    color: var(--font-secondary);
+    font-size: small;
+}
+
+.todo-submit-container{
+    padding: 3rem;
+}
+
+.todo-form-container{
+    height:100%; 
+    width:100% ;
+}
+
+.todo-edit-header{
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+.todo-filter-container{
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.todo-filter-item{
+    position: relative;
+    padding: 0.3rem 0;
+    display: flex;
+    width: 50%;
+}
+
+.todo-filter-ref{
+    display: flex;
+}
+
+.todo-filter-input{
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    outline: none;
+    background: none;
+    height: 1.5rem;
+    padding: 0.5rem;
+    color:var(--font-secondary);
+    z-index: 1;
+    width: 100%;
+}
+
+.todo-filter-label{
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    padding-left: 0.5rem;
+    color: white;
+    background-color: var(--secondary-bg-color);
+    transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+    z-index: 0;
+}
+
+.todo-filter-input:focus ~ .todo-filter-label,
+.todo-filter-input:not(:placeholder-shown).todo-filter-input:not(:focus) ~ .todo-filter-label{
+    top:-.1rem;
+    font-size: x-small;
+    z-index: 1;
+    padding: 0rem 0.5rem;
+}
+
+ ul{
+    list-style-type: none;
+}
+
+
+.todo-filter-dropdown-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    height: 1.5rem;
+    cursor:pointer;
+    width: 100%;
+}
+
+.todo-filter-dropdown-input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: var(--font-secondary);
+    z-index: 1;
+    background: none;
+    outline: none;
+    border: none;
+    left: 1rem;
+}
+
+.todo-filter-dropdown-label{
+    position: absolute;
+    top:0.01rem;
+    left: 0.5rem;
+    padding: 0rem 0rem;
+    color: var(--font-secondary);
+    background-color: var(--secondary-bg-color);
+    transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+}
+
+.todo-dropdown-filter-options{
+    position: absolute;
+    width: 100%;
+    top: 1.2rem;
+    z-index: 3;
+}
+
+.todo-filter-dropdown-input:focus ~ .todo-filter-dropdown-label,
+.todo-filter-dropdown-input:not(:placeholder-shown).todo-filter-dropdown-input:not(:focus) ~ .todo-filter-dropdown-label{
+    top:-.5rem;
+    font-size: x-small;
+    z-index: 1;
+    padding: 0rem 0.5rem;
+}
+
+.todo-filter-dropdown-container ul{
+    visibility: hidden;
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    top:1.2rem;
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    left: 0;
+    border: 1.5px solid var(--primary-color);
+}
+.todo-filter-dropdown-container  ul.show{
+    visibility:visible;
+    max-height: 80px;
+    transition: all 0.4s;
+    overflow: scroll;
+}

@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+  :root {
+    --main-bg-color: #2e4346;
+    --secondary-bg-color: #0a5864;
+    --font-primary: #10707d;
+    --font-secondary: #ffff;
+    --primary-color:#62abaa;
+    --secondary-color:#10707d;
+  }
+
+* { 
+    box-sizing: border-box;
+    font-family:sans-serif}
+
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--main-bg-color);
+}
+
+h3{
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.header-container{
+    padding: 3px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: var(--main-bg-color);
+    color: var(--font-secondary)
+}
+
+.header-links{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.header-link{
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.header-link:hover{
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: var(--font-secondary);
+}
+
+.button-delete{
+    background-color: red;
+    color: var(--font-secondary);
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.button-delete:hover{
+    background-color:rgb(61, 1, 1);
+}
+
+.button-primary{
+    background-color: var(--primary-color);
+    color: var(--font-secondary);
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.button-primary:hover{
+    background-color:var(--main-bg-color);
+}
+
+.button-secondary{
+    /* background-color: var(--primary-color); */
+    color: var(--primary-color) ;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color:var(--font-secondary);
+    border: none;
+    outline: none;
+}
+
+.button-secondary:hover{
+    border: none;
+    color: var(--font-secondary);
+    font-weight: bold  ;
+    border: 2px solid transparent;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+}
+
+
+
+
+
+

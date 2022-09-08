@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./todoFolder/todo.css" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <h1 class="todo-heading">Todo App</h1>
+    <section class="todo-section">
+      <div class="todo-column">
+        <h3>Task Manager</h3>
+        <div class="todo-column-section">
+          <h1 id="todo-title" class="todo-edit-header">New Task Interface</h1>
+          <form class="todo-form-container">
+            <div class="todo-grid">
+              <div class="todo-grid-element">
+                <div class="todo-form-element">
+                  <input
+                    placeholder=" "
+                    type="text"
+                    id="todo-task-input-id"
+                    autocomplete="off"
+                    class="todo-form-input"
+                    disabled="true"
+                  />
+                  <label for="todo-task-input-id" class="todo-form-label"
+                    >Id</label
+                  >
+                </div>
+              </div>
+              <div class="todo-grid-element">
+                <div class="todo-form-element">
+                  <input
+                    placeholder=" "
+                    type="text"
+                    id="todo-task-input-name"
+                    autocomplete="off"
+                    class="todo-form-input"
+                  />
+                  <label for="todo-task-input-name" class="todo-form-label"
+                    >Name</label
+                  >
+                </div>
+              </div>
+
+              <div class="todo-grid-element">
+                <div class="todo-form-element">
+                  <div class="todo-dropdown-container">
+                    <input
+                    placeholder=" "
+                    type="text"
+                    id="todo-task-input-asignee"
+                    autocomplete="off"
+                    class="todo-dropdown-input"
+                    disabled
+                  />
+                    <ul class="todo-dropdown-options">
+                      <li id="" class="todo-asignee-option"></li>
+                      <li id="Frank" class="todo-asignee-option">Frank</li>
+                      <li id="John" class="todo-asignee-option">John</li>
+                      <li id="Alice" class="todo-asignee-option">Alice</li>
+                      <li id="Mary" class="todo-asignee-option">Mary</li>
+                    </ul>
+                    <label class="todo-form-dropdown-label"
+                    >Asignee</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="todo-grid-element">
+                <div class="todo-form-element-radio">
+                    <input value="Pending" type="radio" id="Pending" name="todo-status">Pending</input>
+                    <input value="Done" type="radio" id="Done" name="todo-status">Done</input>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="todo-submit-container">
+              <a id="todo-button" type="submit" class="button-secondary" href="#">Create Task</a>
+          </div>
+        </div>
+      </div>
+      <div class="todo-column">
+        <h3>Task List</h3>
+        <div class="todo-column-section">
+            <div class="todo-filter-container">
+              <h3>Filtering</h3>
+              <div class='todo-filter-item'>
+                  <input
+                    placeholder=" "
+                    type="text"
+                    id="todo-filter-input-name"
+                    autocomplete="off"
+                    class="todo-filter-input"
+                  />
+                  <label class="todo-filter-label"
+                  >Filter Name</label
+                  > 
+              </div>
+              <div class="todo-filter-item">
+                <div id="todo-filter-date" class="todo-filter-dropdown-container">
+                  <input
+                  placeholder=" "
+                  type="text"
+                  id="todo-filter-date-input"
+                  autocomplete="off"
+                  class="todo-filter-dropdown-input"
+                  disabled
+                />
+                
+                  <ul id="todo-filter-date-options" class="todo-dropdown-filter-options">
+                    <li id="" class="todo-asignee-option"></li>
+                    <li id="Ascending" class="todo-asignee-option">Ascending</li>
+                    <li id="Descending" class="todo-asignee-option">Descending</li>
+                  </ul>
+                 
+                  <label class="todo-filter-dropdown-label"
+                  >Date Filter</label
+                  >
+                </div>
+              </div>
+              <div class="todo-filter-item">
+                <div id="todo-filter-status" class="todo-filter-dropdown-container status">
+                  <input
+                  placeholder=" "
+                  type="text"
+                  id="todo-filter-status-input"
+                  autocomplete="off"
+                  class="todo-filter-dropdown-input"
+                  disabled
+                />
+                
+                  <ul id="todo-filter-status-options" class="todo-dropdown-filter-options">
+                    <li id="" class="todo-asignee-option"></li>
+                    <li id="Pending" class="todo-asignee-option">Pending</li>
+                    <li id="Done" class="todo-asignee-option">Done</li>
+                  </ul>
+                 
+                  <label class="todo-filter-dropdown-label"
+                  >Status Filter</label
+                  >
+                </div>
+              </div>
+            </div>
+            <h1 class="todo-edit-header">Edit Element</h1>
+            <div class="todo-table-full">
+              <table class="todo-table">
+                <thead>
+                  <tr class="todo-table-row">
+                    <th style="min-width: 130px;" id="th-id">ID</th>
+                    <th style="min-width: 100px;"id="th-name">NAME</th>
+                    <th style="min-width: 100px;"id="th-asignee">ASIGNEE</th>
+                    <th style="min-width: 95px;"id="th-date">DATE</th>
+                    <th style="min-width: 70px;"id="th-status">STATUS</th>
+                    <th style="min-width: 75px;"id="th-options"></th>
+                  </tr>
+                </thead>
+                <div class="table-body-container" style="overflow-y:scroll ;">
+                  <tbody class="todo-table-container">
+                  </tbody>
+                </div>
+              </table>
+            </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

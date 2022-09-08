@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bonusFolder/bonus.css" />
+    <title>Bonus Calculator</title>
+  </head>
+  <body>
+    <h1 class="bonus-heading">Bonus App</h1>
+    <div class="bonus-cointainer">
+      <h2 class="bonus-container-header">Calculate your Aguinaldo</h2>
+      <div class="bonus-form-container">
+        <div class="bonus-form-element">
+          <h3 class="bonus-form-element-header">
+            Please enter the following information
+          </h3>
+          <form class="bonus-form">
+            <!-- <div class="bonus-form-inside"> -->
+              <div class="bonus-form-item">
+                <input
+                  placeholder=" "
+                  type="number"
+                  id="bonus-input-salary"
+                  autocomplete="off"
+                  class="bonus-form-input"
+                />
+                <label class="bonus-form-label">Salary</label>
+              </div>
+              <div class="bonus-form-item">
+                <input
+                  placeholder=" "
+                  type="number"
+                  id="bonus-input-years"
+                  autocomplete="off"
+                  class="bonus-form-input"
+                />
+                <label class="bonus-form-label">Years</label>
+              </div>
+              <div class="bonus-form-item">
+                <input
+                  placeholder=" "
+                  type="number"
+                  id="bonus-input-days"
+                  autocomplete="off"
+                  class="bonus-form-input"
+                />
+                <label class="bonus-form-label">Days</label>
+              </div>
+            <!-- </div> -->
+          </form>
+          <div class="bonus-submit-button">
+            <button id="bonus-button" type="submit" class="button-secondary button"
+              >Calculate</button>
+          </div>
+        </div>
+        <div class="bonus-form-element">
+            <div class="bonus-result-container">
+                <h3>Your calculation is:</h3>
+                <h2 id="bonus-result">
+                </h2>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

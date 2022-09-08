@@ -1,0 +1,195 @@
+.bonus-heading{
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.bonus-cointainer{
+    background-color: var(--secondary-bg-color);
+    padding: 1rem;
+    height: 70vh;
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 1320px) {
+    .bonus-cointainer {
+      width: 90vw;
+    }
+  }
+
+@media (max-width: 957px) {
+    .bonus-cointainer {
+      width: 95vw;
+      height: 80vh;
+      margin-bottom: 4rem;
+    }
+
+  }
+
+  @media (max-width: 715px) {
+    .bonus-cointainer {
+      width: 95vw;
+    }
+  }
+
+.bonus-container-header{
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: center;
+
+}
+
+.bonus-form-container{    
+    height: 100%;
+    border-radius: 4px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem
+}
+
+@media (max-width: 957px) {
+    .bonus-form-container {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 715px) {
+    .bonus-form-container {
+      flex-direction: column;
+      width: 80%;
+    }
+
+    .bonus-form-element{
+        height: 50%;
+        overflow-y: scroll;
+        padding: 1rem 1rem;
+    }
+
+    .button-secondary{
+        min-width: 6rem;
+        max-width: 40%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .bonus-form-item{
+        margin: 0.5rem auto;
+        width: 70%;
+    }
+
+    .bonus-form{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+  }
+
+.bonus-form{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.bonus-form-element{
+    padding: 0 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.bonus-form-element-header{
+    padding: 1rem;
+    color: var(--font-secondary);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.bonus-form-item{
+    height: 1rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border: 1px solid var(--primary-color);
+    position:relative;
+}
+
+.bonus-form-input{
+    outline: none;
+    background: none;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    width: 100%;
+    color: var(--font-secondary);
+}
+
+.bonus-form-label{
+    position: absolute;
+    padding: 0 1rem;
+    color: var(--font-secondary);
+    height: 1rem;
+    top: 0.5rem;
+    left: 0;
+    background-color: var(--secondary-bg-color) ;
+    transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+}
+
+.bonus-form-input:focus ~ .bonus-form-label,
+.bonus-form-input:not(:placeholder-shown).bonus-form-input:not(:focus) ~ .bonus-form-label{
+    top:-0.3rem;
+    left: 0.3rem;
+    font-size: x-small;
+    z-index: 1;
+    padding: 0rem 0.5rem;
+}
+
+.bonus-submit-button{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bonus-result-container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-secondary) ;
+
+}
+
+
+.button{
+  margin: 0 auto;
+  cursor: pointer;
+  background:none;
+  display: block;
+  margin-bottom: 2rem;
+  background-color:var(--font-secondary);
+  outline: none;
+}
+
+.button.disabled{
+  cursor:not-allowed
+}
