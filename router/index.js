@@ -34,7 +34,7 @@ const PATHS = {
     path: "/",
     template: "/todoFolder/todo.html",
     scripts: {
-      main: "/todoFolder/todoFunctions.js",
+      main: "/todoFolder/todo.js",
     },
     name: "todo-script",
   },

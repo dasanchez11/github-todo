@@ -83,8 +83,8 @@
 
 thead{
     display: block  ;
-    width: 100%;
-    overflow: visible;
+    width: max-content;
+    margin: 0 auto;
 }
 
 tbody{
