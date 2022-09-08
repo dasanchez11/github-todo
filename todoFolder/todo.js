@@ -2,6 +2,7 @@ import { FormUi } from "./util/formUi.js";
 import { Storage } from "./util/storage.js";
 import { TaskList } from "./util/taskList.js";
 import { TaskListUi } from "./util/taskListUi.js";
+import { Task } from "./util/task.js";
 
 const storage = new Storage();
 const taskList = new TaskList(storage.tasks);
@@ -34,7 +35,9 @@ document
 
 document.querySelector("#todo-button").addEventListener("click", (e) => {
   e.preventDefault();
-  const newTask = formUi.getFormElements();
+  let newTask = formUi.getFormElements();
+  const {id,name,asignee,status,date} = newTask
+  newTask = new Task(id,name,asignee,status,date)
   const isValid = formUi.validate(
     newTask.name,
     newTask.asignee,

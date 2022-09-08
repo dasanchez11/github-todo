@@ -21,7 +21,7 @@ const pathSwitch = (currentPathName) => {
     case "/todo":
       return "todo";
     case "/":
-      return "todo";
+      return "bonus";
     case "/bonus":
       return "bonus";
     default:
