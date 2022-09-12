@@ -3,8 +3,6 @@ export class GithubFetch{
     constructor(){
         this.cliendId = '19558fcfc7a4c4dbf5a4'
         this.clientSecret = 'ae1be83efbc973710f237951867a0ba3b4596255'
-        // this.clientId = clientId
-        // this.clientSecret = clientSecret
         this.baseUrl = 'https://api.github.com/'
         this.authUrl = `client_id=${this.cliendId}&client_secret=${this.clientSecret}`
     }
@@ -37,6 +35,13 @@ export class GithubFetch{
                 callback(...args)
             },delay)
         }
+    }
+
+    getStars = async(userId) =>{
+        const url = `${this.baseUrl}/users/${userId}/starred?q=${this.authUrl}`
+        const res = await fetch(url)
+        const stars = await res.json()
+        return stars
     }
 }
 

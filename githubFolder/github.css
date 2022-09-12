@@ -101,6 +101,9 @@ a{
 
 .profile-basic-info{
   /* align-items: flex-end; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   
 }
 
@@ -108,7 +111,6 @@ a{
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
-  background-image: url('https://avatars.githubusercontent.com/u/65550334?v=4');
   background-size: cover;
 }
 
@@ -176,9 +178,6 @@ a{
   border-bottom: 1px solid var(--primary-color);
 }
 
-/* .github-repo-item:hover{
-  background-color: var(--primary-color);
-} */
 
 .github-repo-specific-item{
   padding:1rem;
@@ -187,7 +186,7 @@ a{
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  /* margin: auto */
+  overflow-x: hidden;
 }
 
 .github-repo-link:hover{
@@ -208,4 +207,57 @@ a{
 .no-repos h3{
   color: var(--font-secondary);
 
+}
+
+.github-filter-elements{
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--primary-color);
+  position: absolute;
+  width: 100%;
+  top:2.2rem;
+  max-height: 15rem;
+  overflow-y: scroll;
+}
+
+.github-filter-option{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+  align-items: center;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.github-filter-option:last-child{
+  border: 0;
+}
+
+.github-filter-option:hover{
+  cursor: pointer;
+  background-color: var(--primary-color-light);
+  color: var(--font-secondary) ;
+}
+
+.github-filter-pic{
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-size: cover;
+}
+
+.github-filter-name{
+  font-weight:bold;
+}
+
+.github-go-to-profile{
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+.github-no-information{
+  color:var(--font-secondary);
+  font-size: large;
+  font-weight: 700;
 }
