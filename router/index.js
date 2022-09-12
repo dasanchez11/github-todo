@@ -21,9 +21,9 @@ const pathSwitch = (currentPathName) => {
     case "/todo":
       return "todo";
     case "/":
-      return "bonus";
-    case "/bonus":
-      return "bonus";
+      return "github";
+    case "/github":
+      return "github";
     default:
       return "other";
   }
@@ -38,13 +38,13 @@ const PATHS = {
     },
     name: "todo-script",
   },
-  bonus: {
-    path: "/bonus",
-    template: "/bonusFolder/bonus.html",
+  github: {
+    path: "/github",
+    template: "/githubFolder/github.html",
     scripts: {
-      main: "/bonusFolder/bonus.js",
+      main: "/githubFolder/github.js",
     },
-    name: "bonus-script",
+    name: "github-script",
   },
   other: {
     path: "/other",
