@@ -6,6 +6,11 @@
     width: 100vw;
 }
 
+h1{
+    text-align: center;
+    color: var(--primary-color);
+}
+
 @media (max-width: 900px) {
     .todo-section{
         flex-direction: column;

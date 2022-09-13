@@ -55,6 +55,15 @@ document
       const member = created_at.split('T')[0]
       userUi.createFullProfile(avatar_url,name||login,member,stars,public_repos,followers,following,company,blog,location,login)
 
+      //// Link to Blog
+      if(blog){
+        document.getElementById('github-website').addEventListener('click',(e)=>{
+          e.preventDefault()
+          const url = e.target.id
+          window.open(url, '_blank').focus()
+        })
+      }
+
 
       //// GO TO PROFILE
       document.querySelector('.github-go-profile').addEventListener('click',(e)=>{

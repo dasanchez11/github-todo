@@ -119,9 +119,11 @@ export class UserUi {
     createWebsite(website){
         const newElement = document.createElement('div')
         newElement.innerHTML = `
-        <div class="github-profile-icon">
-            <span>Website: ${website}</span>
-            <i class="fa-solid fa-browser"></i>
+        <div id='github-website' class="github-profile-icon">
+            <a href='#'>
+                <span id=${website}>Website: ${website}</span>
+                <i class="fa-solid fa-browser"></i>
+            </a>
         </div>
         `
         return newElement
