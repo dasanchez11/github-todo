@@ -48,7 +48,8 @@ document
     Promise.all([github.getUser(selection),github.getStars(selection)])
     .then((res) =>{
       let [user,stars] = res
-      stars = stars?.length
+      stars = stars.length
+      stars = stars>=30 ? '30+':stars
       userUi.clearProfile()
       const {avatar_url,name,login,created_at,public_repos,followers,following,company,blog,location} = user
       const member = created_at.split('T')[0]

@@ -15,13 +15,13 @@ export class GithubFetch{
     }
 
     getUser = async (searchUser) =>{
-        const res = await fetch(this.baseUrl+`users/${searchUser}`+'?q='+this.authUrl)
+        const res = await fetch(this.baseUrl+`users/${searchUser}`+'?='+this.authUrl)
         const user = await res.json()
         return user
     }
 
-    getRepositories = async(searchUser,page=1,per_page=10)=>{
-        const pagination = `page=${page}&per_page=${per_page}`
+    getRepositories = async(searchUser,page=1,per_page=15)=>{
+        const pagination = `page=${page}&per_page=${per_page}&sort=updated-asc`
         const res = await fetch(this.baseUrl+`users/${searchUser}/repos`+'?q='+pagination+'&'+this.authUrl)
         const user = await res.json()
         return user
