@@ -14,16 +14,18 @@ userUi.initializeUserUi()
 
 //// SEARCH BAR
 const debounceRequest = github.debouce((value) => {
+  if(value!==''){
   github
     .getUsers(value)
     .then((res) => {
-      searchUi.removeAllFilterOptions();
-      searchUi.setActive(true);
-      searchUi.createAllFilterOptions(res.items);
-    })
-    .catch((err) => {
-      alert('An error ocurred')
-    });
+        searchUi.removeAllFilterOptions();
+        searchUi.setActive(true);
+        searchUi.createAllFilterOptions(res.items);
+      })
+      .catch((err) => {
+        alert('An error ocurred')
+      });
+    }
 }, 700);
 
 document
@@ -34,6 +36,7 @@ document
     } else {
       searchUi.setActive(false);
       searchUi.removeAllFilterOptions();
+      debounceRequest(e.target.value);
     }
   });
 
@@ -45,12 +48,11 @@ document
     Promise.all([github.getUser(selection),github.getStars(selection)])
     .then((res) =>{
       let [user,stars] = res
-      stars = stars.length
-      console.log(user)
+      stars = stars?.length
       userUi.clearProfile()
-      const {avatar_url,name,login,created_at,public_repos,followers,following,company,website,location} = user
+      const {avatar_url,name,login,created_at,public_repos,followers,following,company,blog,location} = user
       const member = created_at.split('T')[0]
-      userUi.createFullProfile(avatar_url,name||login,member,stars,public_repos,followers,following,company,login)
+      userUi.createFullProfile(avatar_url,name||login,member,stars,public_repos,followers,following,company,blog,location,login)
 
 
       //// GO TO PROFILE
@@ -63,7 +65,9 @@ document
 
 
     }).catch(error =>{
+      console.log(error)
       alert('An error ocurred')
+      
     })
 
     github
@@ -75,10 +79,11 @@ document
 
         //// REPO LINK
         document.getElementById('repo-container').addEventListener('click',(e)=>{
-          e.preventDefault()
           const id = e.target.closest('div').id
-          const url = `https://github.com/${id}`
-          window.open(url, '_blank').focus()
+          if(id){
+            const url = `https://github.com/${id}`
+            window.open(url, '_blank').focus()
+          }
         })
 
       })

@@ -38,7 +38,7 @@ export class GithubFetch{
     }
 
     getStars = async(userId) =>{
-        const url = `${this.baseUrl}/users/${userId}/starred?q=${this.authUrl}`
+        const url = `${this.baseUrl}users/${userId}/starred?q=${this.authUrl}`
         const res = await fetch(url)
         const stars = await res.json()
         return stars

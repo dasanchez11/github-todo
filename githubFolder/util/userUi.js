@@ -46,7 +46,7 @@ export class UserUi {
             otherElement.appendChild(this.createWebsite(website))
         }
         if(location){
-            otherElement.appendChild(this.createLocation(locaiton))
+            otherElement.appendChild(this.createLocation(location))
         }
     }
 
@@ -121,7 +121,7 @@ export class UserUi {
         newElement.innerHTML = `
         <div class="github-profile-icon">
             <span>Website: ${website}</span>
-            <i class="fa-solid fa-location-pin"></i>
+            <i class="fa-solid fa-browser"></i>
         </div>
         `
         return newElement

@@ -18,27 +18,23 @@ export class TaskList {
     this.allTasks = newTasks;
   };
 
-  // One Task
   getSpecificTask = (id) => {
     const tasks = this.allTasks;
     return tasks.filter((task) => task.id === id)[0];
   };
 
-  // Delete task
   deleteTask = (taskId) => {
     let allTasks = this.allTasks;
     allTasks = allTasks.filter((task) => task.id !== taskId);
     this.setTasks(allTasks);
   };
 
-  // create task
   createTask = (task) => {
     let allTasks = this.allTasks;
     const newAllTasks = [...allTasks, task];
     this.setTasks(newAllTasks);
   };
 
-  // edit task
   editTask = (editTask) => {
     const tasks = this.allTasks;
     const newTasksArray = tasks.map((task) => {
@@ -51,7 +47,6 @@ export class TaskList {
   };
 
   returnTasks = () => {
-    
     let tasksFiltered = this.allTasks;
     tasksFiltered = this.nameFilter(this.nameFilterVal, tasksFiltered);
     tasksFiltered = this.dateSorter(this.dateSortVal, tasksFiltered);
