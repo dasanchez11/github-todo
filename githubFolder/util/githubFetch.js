@@ -21,7 +21,7 @@ export class GithubFetch {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this.authToken}`,
+        // Authorization: `Bearer ${this.authToken}`,
       },
     });
     const user = await res.json();
@@ -36,7 +36,7 @@ export class GithubFetch {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${this.authToken}`,
+          // Authorization: ` token ${this.authToken}`,
         },
       }
     );
@@ -60,7 +60,7 @@ export class GithubFetch {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this.authToken}`,
+        // Authorization: `Bearer ${this.authToken}`,
       },
     });
     const stars = await res.json();
