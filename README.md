@@ -1,5 +1,3 @@
-# week 2 challenge
-
 ## Code Written By Diego Sánchez
 
 ## Code found at: https://dancing-starburst-4465fa.netlify.app/
