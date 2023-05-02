@@ -5,20 +5,17 @@
 ## Code found at: https://dancing-starburst-4465fa.netlify.app/
 
 ## Code Restrictions:
+
 - This is a SPA so the only route working is the Home Route
-- At the Home route the Todo and Bonus routes can be accessed. 
+- At the Home route the Todo and Bonus routes can be accessed.
 
 ## Instructions
-- Clone the repository at https://gitlab.com/applaudo3/week-1-challenge.git
-- Open Visual Studio code 
+
+- Clone the repository
+- Open Visual Studio code
 - Download Live Server extension for visual studio code
 - Open index.html with Live Server
 - Go to http://localhost:5500/
-![alt text](./LiveServer.png "Live Server")
+  ![alt text](./LiveServer.png "Live Server")
 - Enjoy the website
-![alt text](./website.png "Website")
-
-
-
-
-
+  ![alt text](./website.png "Website")
