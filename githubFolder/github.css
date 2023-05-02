@@ -178,7 +178,7 @@ a{
 
 .github-repo-container{
   flex-direction: column;
-  /* border: 1px solid black; */
+  border: 1px solid $color-white;
   overflow-y: scroll;
   max-height: 20rem;
   overflow-x: scroll;
